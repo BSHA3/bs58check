@@ -1,6 +1,6 @@
 {
   "name": "bs58check",
-  "version": "2.1.2",
+  "version": "2.1.2-bsha3",
   "description": "A straightforward implementation of base58-check encoding",
   "keywords": [
     "base",
@@ -16,9 +16,9 @@
     "encoding",
     "litecoin"
   ],
-  "homepage": "https://github.com/bitcoinjs/bs58check",
+  "homepage": "https://github.com/bsha3/bs58check",
   "bugs": {
-    "url": "https://github.com/bitcoinjs/bs58check/issues"
+    "url": "https://github.com/bsha3/bs58check/issues"
   },
   "license": "MIT",
   "author": "Daniel Cousens",
@@ -29,7 +29,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitcoinjs/bs58check.git"
+    "url": "https://github.com/bsha3/bs58check.git"
   },
   "scripts": {
     "coverage-report": "nyc report --reporter=lcov",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "bs58": "^4.0.0",
-    "create-hash": "^1.1.0",
+    "js-sha3": "^0.8.0",
     "safe-buffer": "^5.1.2"
   },
   "devDependencies": {
