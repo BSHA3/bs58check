@@ -1,12 +1,12 @@
 'use strict'
 
-var createHash = require('create-hash')
+var sha3  = require('js-sha3').sha3_256
 var bs58checkBase = require('./base')
 
-// SHA256(SHA256(buffer))
-function sha256x2 (buffer) {
-  var tmp = createHash('sha256').update(buffer).digest()
-  return createHash('sha256').update(tmp).digest()
+// SHA3(SHA3(buffer))
+function sha3x2 (buffer) {
+  var tmp = sha3.create().update(buffer).digest()
+  return sha3.create().update(tmp).digest()
 }
 
-module.exports = bs58checkBase(sha256x2)
+module.exports = bs58checkBase(sha3x2)
